@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>NEPHILIM | Official Manga</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>NEPHILIM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 
 <body>
@@ -16,68 +16,43 @@
 <header class="hero">
   <div id="particles"></div>
 
+  <div class="hero-overlay"></div>
+
   <div class="hero-content">
-    <img src="assets/Illustration3.png" alt="Nephilim Logo" class="logo">
-    <p class="tagline">Power isn’t given. It awakens.</p>
-    <a href="#premise" class="btn">Enter the World</a>
+    <h1 class="title">NEPHILIM</h1>
+    <p class="subtitle">Power isn’t given. It awakens.</p>
+    <a href="#world" class="btn">Enter the World</a>
   </div>
 </header>
 
-<section id="premise" class="reveal">
-  <h2>Premise</h2>
+<section id="world" class="reveal">
+  <h2>The Awakening</h2>
   <p>
-    A hidden force known as <span class="highlight">Life Energy</span> flows through every human.
-    Those who awaken it become <span class="highlight">Nephilims</span>.
+    Life Energy flows through every human. Dormant. Violent. Waiting.
   </p>
   <p>
-    They manifest <span class="highlight">Spades</span> — abilities forged from instinct,
-    emotion, and identity.
-  </p>
-  <p>
-    Nephilims aren’t chosen. They’re shaped.
+    When trauma fractures the soul, it awakens.
+    And those who survive become Nephilims.
   </p>
 </section>
 
 <section class="reveal">
-  <h2>Main Cast</h2>
-
-  <div class="card">
-    <h3>Kai Shinsui</h3>
-    <p>Reckless. Calm. Instinctive.</p>
-    <p><strong>Spade:</strong> Copycat</p>
-  </div>
-
-  <div class="card">
-    <h3>Ryo Shinsui</h3>
-    <p>Hot-headed. Explosive. Proud.</p>
-    <p><strong>Spade:</strong> Steelbound</p>
-  </div>
-
-  <div class="card">
-    <h3>Mira Vale</h3>
-    <p>Playful. Strategic. Precise.</p>
-    <p><strong>Spade:</strong> Pulse</p>
-  </div>
-
-  <div class="card">
-    <h3>Ash Kuroda</h3>
-    <p>Disciplined. Controlled. Calculated.</p>
-    <p><strong>Spade:</strong> Ignition</p>
-  </div>
+  <h2>The Spades</h2>
+  <p>
+    Power forged from instinct. From fear. From identity.
+  </p>
+  <p>
+    No two awakenings are the same.
+  </p>
 </section>
 
 <section class="reveal">
-  <h2>Organizations</h2>
-
-  <div class="card">
-    <h3>Nephilim Parade</h3>
-    <p>Trains and regulates awakened Nephilims.</p>
-  </div>
-
-  <div class="card">
-    <h3>The Null Syndicate</h3>
-    <p>Experiments on Nephilims to mass-produce power.</p>
-  </div>
+  <h2>The War Beneath</h2>
+  <p>
+    Rebel factions rise.
+    Syndicates experiment.
+    The balance fractures.
+  </p>
 </section>
 
 <footer>
@@ -88,16 +63,11 @@
 tsParticles.load("particles", {
   background: { color: "transparent" },
   particles: {
-    number: { value: 40 },
-    color: { value: "#ffffff" },
-    links: {
-      enable: true,
-      color: "#ffffff",
-      opacity: 0.05
-    },
+    number: { value: 50 },
+    color: { value: "#7a0000" },
     move: { enable: true, speed: 0.6 },
     opacity: { value: 0.2 },
-    size: { value: { min: 1, max: 2 } }
+    size: { value: { min: 1, max: 3 } }
   }
 });
 
@@ -111,9 +81,7 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 
-reveals.forEach(section => {
-  observer.observe(section);
-});
+reveals.forEach(section => observer.observe(section));
 </script>
 
 </body>
