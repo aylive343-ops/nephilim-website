@@ -7,7 +7,23 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<script>
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+});
+
+sections.forEach(section => {
+  section.classList.add("hidden");
+  observer.observe(section);
+});
+</script>
+  <body>
 
   <!-- HERO -->
   <header class="hero">
