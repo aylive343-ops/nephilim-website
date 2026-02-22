@@ -7,52 +7,102 @@
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 
 <body>
 
+<!-- HERO -->
 <header class="hero">
   <div id="particles"></div>
+  <div class="overlay"></div>
 
-  <div class="hero-overlay"></div>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <h1 class="title">NEPHILIM</h1>
+      <p class="tagline">
+        Trauma awakens power.<br>
+        Power awakens monsters.
+      </p>
+      <a href="#cast" class="btn">Enter the War</a>
+    </div>
 
-  <div class="hero-content">
-    <h1 class="title">NEPHILIM</h1>
-    <p class="subtitle">Power isn’t given. It awakens.</p>
-    <a href="#world" class="btn">Enter the World</a>
+    <div class="hero-image">
+      <img src="assets/Illustration3.png" alt="Main Character">
+    </div>
   </div>
 </header>
 
-<section id="world" class="reveal">
-  <h2>The Awakening</h2>
+<!-- STORY -->
+<section class="reveal">
+  <h2>Life Energy</h2>
   <p>
-    Life Energy flows through every human. Dormant. Violent. Waiting.
+    Life Energy exists in every human — dormant and violent.
+    When pushed beyond their limit, it erupts.
   </p>
   <p>
-    When trauma fractures the soul, it awakens.
-    And those who survive become Nephilims.
+    Those who survive become Nephilims.
   </p>
 </section>
 
-<section class="reveal">
-  <h2>The Spades</h2>
-  <p>
-    Power forged from instinct. From fear. From identity.
-  </p>
-  <p>
-    No two awakenings are the same.
-  </p>
+<!-- MAIN CAST -->
+<section id="cast" class="reveal cast-section">
+  <h2>Main Cast</h2>
+
+  <div class="cast-grid">
+
+    <div class="character-card">
+      <h3>Kai Shinsui</h3>
+      <span class="spade">Spade: Copycat</span>
+      <p>
+        Calm under pressure. Dangerous under silence.
+        He adapts. He learns. He survives.
+      </p>
+    </div>
+
+    <div class="character-card">
+      <h3>Ryo Shinsui</h3>
+      <span class="spade">Spade: Steelbound</span>
+      <p>
+        Rage fuels him. Pride defines him.
+        He doesn’t retreat.
+      </p>
+    </div>
+
+    <div class="character-card">
+      <h3>Mira Vale</h3>
+      <span class="spade">Spade: Pulse</span>
+      <p>
+        Precision over chaos.
+        Every move calculated.
+      </p>
+    </div>
+
+    <div class="character-card">
+      <h3>Ash Kuroda</h3>
+      <span class="spade">Spade: Ignition</span>
+      <p>
+        Discipline masks instability.
+        He burns from within.
+      </p>
+    </div>
+
+  </div>
 </section>
 
+<!-- ORGANIZATIONS -->
 <section class="reveal">
-  <h2>The War Beneath</h2>
-  <p>
-    Rebel factions rise.
-    Syndicates experiment.
-    The balance fractures.
-  </p>
+  <h2>Organizations</h2>
+
+  <div class="organization">
+    <h3>Nephilim Parade</h3>
+    <p>Regulates awakened power. Controls the narrative.</p>
+  </div>
+
+  <div class="organization">
+    <h3>The Null Syndicate</h3>
+    <p>Breaks Nephilims. Rebuilds them as weapons.</p>
+  </div>
 </section>
 
 <footer>
@@ -63,10 +113,10 @@
 tsParticles.load("particles", {
   background: { color: "transparent" },
   particles: {
-    number: { value: 50 },
+    number: { value: 60 },
     color: { value: "#7a0000" },
-    move: { enable: true, speed: 0.6 },
-    opacity: { value: 0.2 },
+    move: { enable: true, speed: 0.7 },
+    opacity: { value: 0.25 },
     size: { value: { min: 1, max: 3 } }
   }
 });
