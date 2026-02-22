@@ -8,36 +8,29 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Particle Library -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 
 <body>
 
-<!-- HERO -->
 <header class="hero">
   <div id="particles"></div>
 
   <div class="hero-content">
     <img src="assets/Illustration3.png" alt="Nephilim Logo" class="logo">
-
-    <p class="tagline">
-      Power isn’t given. It awakens.
-    </p>
-
-    <a href="reader.html" class="btn">Enter Chapter 1</a>
+    <p class="tagline">Power isn’t given. It awakens.</p>
+    <a href="#premise" class="btn">Enter the World</a>
   </div>
 </header>
 
-<!-- PREMISE -->
-<section>
+<section id="premise" class="reveal">
   <h2>Premise</h2>
   <p>
     A hidden force known as <span class="highlight">Life Energy</span> flows through every human.
     Those who awaken it become <span class="highlight">Nephilims</span>.
   </p>
   <p>
-    They manifest <span class="highlight">Spades</span> abilities forged from instinct,
+    They manifest <span class="highlight">Spades</span> — abilities forged from instinct,
     emotion, and identity.
   </p>
   <p>
@@ -45,55 +38,43 @@
   </p>
 </section>
 
-<!-- CHARACTERS -->
-<section>
+<section class="reveal">
   <h2>Main Cast</h2>
 
-  <div class="character-card cinematic">
-    <div class="character-info">
-      <h3>Kai Shinsui</h3>
-      <p>Reckless. Calm. Instinctive.</p>
-      <p><strong>Spade:</strong> Copycat</p>
-      <p><strong>Core Weapon:</strong> Breaker Katana</p>
-    </div>
+  <div class="card">
+    <h3>Kai Shinsui</h3>
+    <p>Reckless. Calm. Instinctive.</p>
+    <p><strong>Spade:</strong> Copycat</p>
   </div>
 
-  <div class="character-card cinematic">
-    <div class="character-info">
-      <h3>Ryo Shinsui</h3>
-      <p>Hot-headed. Explosive. Proud.</p>
-      <p><strong>Spade:</strong> Steelbound</p>
-      <p><strong>Core Weapon:</strong> Breaker Gloves</p>
-    </div>
+  <div class="card">
+    <h3>Ryo Shinsui</h3>
+    <p>Hot-headed. Explosive. Proud.</p>
+    <p><strong>Spade:</strong> Steelbound</p>
   </div>
 
-  <div class="character-card cinematic">
-    <div class="character-info">
-      <h3>Mira Vale</h3>
-      <p>Playful. Smart. Deadly precise.</p>
-      <p><strong>Spade:</strong> Pulse</p>
-    </div>
+  <div class="card">
+    <h3>Mira Vale</h3>
+    <p>Playful. Strategic. Precise.</p>
+    <p><strong>Spade:</strong> Pulse</p>
   </div>
 
-  <div class="character-card cinematic">
-    <div class="character-info">
-      <h3>Ash Kuroda</h3>
-      <p>Disciplined. Strategic. Controlled.</p>
-      <p><strong>Spade:</strong> Ignition</p>
-    </div>
+  <div class="card">
+    <h3>Ash Kuroda</h3>
+    <p>Disciplined. Controlled. Calculated.</p>
+    <p><strong>Spade:</strong> Ignition</p>
   </div>
 </section>
 
-<!-- ORGANIZATION -->
-<section>
+<section class="reveal">
   <h2>Organizations</h2>
 
-  <div class="faction-card">
+  <div class="card">
     <h3>Nephilim Parade</h3>
     <p>Trains and regulates awakened Nephilims.</p>
   </div>
 
-  <div class="faction-card">
+  <div class="card">
     <h3>The Null Syndicate</h3>
     <p>Experiments on Nephilims to mass-produce power.</p>
   </div>
@@ -103,7 +84,6 @@
   © 2026 NEPHILIM
 </footer>
 
-<!-- PARTICLES CONFIG -->
 <script>
 tsParticles.load("particles", {
   background: { color: "transparent" },
@@ -113,32 +93,25 @@ tsParticles.load("particles", {
     links: {
       enable: true,
       color: "#ffffff",
-      opacity: 0.08
+      opacity: 0.05
     },
-    move: {
-      enable: true,
-      speed: 0.5
-    },
-    opacity: { value: 0.15 },
+    move: { enable: true, speed: 0.6 },
+    opacity: { value: 0.2 },
     size: { value: { min: 1, max: 2 } }
   }
 });
-</script>
 
-<!-- SCROLL ANIMATION -->
-<script>
-const sections = document.querySelectorAll("section");
+const reveals = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
+      entry.target.classList.add("active");
     }
   });
 });
 
-sections.forEach(section => {
-  section.classList.add("hidden");
+reveals.forEach(section => {
   observer.observe(section);
 });
 </script>
