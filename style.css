@@ -15,11 +15,54 @@ body {
   position: relative;
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle at center, #1a1a2e, #000);
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
   text-align: center;
+}
+
+.logo {
+  width: 70%;
+  max-width: 900px;
+  filter: contrast(120%) brightness(110%);
+  animation: logoFade 2s ease forwards;
+}
+
+.tagline {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeUp 2s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes logoFade {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero h1 {
@@ -111,4 +154,12 @@ footer {
   background: #000;
   font-size: 0.9rem;
   opacity: 0.6;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.05;
+  z-index: 1;
 }
