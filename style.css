@@ -2,13 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: #000;
-  color: #e6e6e6;
-  line-height: 1.6;
+  background: #0a0a0f;
+  color: #f2f2f2;
+  overflow-x: hidden;
 }
 
 /* HERO */
@@ -18,8 +18,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  background: #000;
+  text-align: center;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
 }
 
 #particles {
@@ -32,72 +32,86 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
 }
 
 .logo {
-  width: 70%;
-  max-width: 900px;
-  filter: contrast(120%) brightness(110%);
-  animation: logoFade 2s ease forwards;
+  width: 280px;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease forwards;
 }
 
 .tagline {
-  margin-top: 30px;
   font-size: 1.2rem;
-  letter-spacing: 2px;
-  opacity: 0;
-  animation: fadeUp 2s ease forwards;
-  animation-delay: 1s;
+  opacity: 0.8;
+  margin-bottom: 30px;
 }
 
-@keyframes logoFade {
-  from { opacity: 0; transform: scale(1.05); }
-  to { opacity: 1; transform: scale(1); }
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* GRAIN OVERLAY */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.05;
-  z-index: 1;
+.btn:hover {
+  background: crimson;
+  color: white;
 }
 
 /* SECTIONS */
 section {
-  padding: 100px 20px;
-  max-width: 1000px;
+  padding: 100px 12%;
+  max-width: 1100px;
   margin: auto;
 }
 
 h2 {
-  margin-bottom: 40px;
   font-size: 2rem;
-  border-bottom: 1px solid #111;
-  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-left: 3px solid crimson;
+  padding-left: 12px;
 }
 
 .highlight {
-  color: #ffffff;
+  color: crimson;
   font-weight: 600;
 }
 
-/* CHARACTER PANELS */
-.cinematic {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  background: #0f0f14;
-  border: 1px solid #1a1a25;
-  margin-bottom: 40px;
-  overflow: hidden;
+.card {
+  background: #14141c;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-left: 2px solid #333;
   transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-left: 2px solid crimson;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.5;
+}
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 1; transform: scale(1); }
 }
