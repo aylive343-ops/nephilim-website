@@ -2,89 +2,148 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>NEPHILIM</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEPHILIM | Official Manga</title>
 
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 
 <body>
 
+<!-- HERO -->
 <header class="hero">
   <div id="particles"></div>
-  <div class="overlay"></div>
+  <div class="hero-overlay"></div>
 
-  <div class="hero-grid">
-    <div class="hero-text">
-      <h1 class="title">NEPHILIM</h1>
-      <p class="tagline">
-        Trauma awakens power.<br>
-        Power awakens predators.
-      </p>
-      <a href="#cast" class="btn">Chapter 1</a>
+  <div class="hero-content">
+    <h1 class="title">NEPHILIM</h1>
+    <h2 class="subtitle">When the Seal Breaks, Power Awakens.</h2>
+
+    <div class="hero-lines">
+      <p>Life Energy sleeps inside everyone.</p>
+      <p>Most die without ever feeling it.</p>
+      <p>Some awaken.</p>
     </div>
 
-     <div class="hero-image">
-      <img src="Illustrationdd.jpg">
-    </div>
+    <a href="#synopsis" class="cta-primary">Read Chapter 1</a>
   </div>
 </header>
 
-<section class="reveal">
-  <h2>Life Energy</h2>
+<!-- SYNOPSIS -->
+<section id="synopsis" class="section reveal">
+  <h2 class="section-title">The Awakening No One Can Control</h2>
+
   <p>
-    Life Energy burns beneath the skin.
-    When the mind fractures — it ignites.
+    In a world where Life Energy lies dormant beneath human skin, most people live unaware of the storm inside them.
   </p>
+
+  <p class="impact">Until something breaks.</p>
+
   <p>
-    Those who survive become something else.
+    NEPHILIM is the name given to those who survive emotional fracture and awaken the force sealed within their bodies — a violent surge of instinct and identity known as a <span class="accent">Spade</span>.
+  </p>
+
+  <p>
+    Governments call them threats. Religions call them heresy. Underground factions call them the future.
+  </p>
+
+  <p class="impact">
+    The question isn’t who has power.<br>
+    It’s who can survive having it.
   </p>
 </section>
 
-<section id="cast" class="reveal cast-section">
-  <h2>Main Cast</h2>
+<!-- WHY YOU'LL LOVE IT -->
+<section class="section dark-panel reveal">
+  <h2 class="section-title">Why You’ll Love This Series</h2>
 
-  <div class="cast-grid">
-    <div class="character-card">
-      <h3>Kai Shinsui</h3>
-      <span class="spade">Spade: Copycat</span>
-      <p>Adapts like instinct. Strikes like flame.</p>
+  <div class="features">
+    <div class="feature">
+      <h3>A Power System Forged from Identity</h3>
+      <p>Spades manifest from who you are at your breaking point.</p>
     </div>
 
-    <div class="character-card">
-      <h3>Ryo Shinsui</h3>
-      <span class="spade">Spade: Density</span>
-      <p>Impact. Force. No hesitation.</p>
+    <div class="feature">
+      <h3>Rebel Factions & Hidden Agendas</h3>
+      <p>No clean heroes. No pure villains. Only ideology and survival.</p>
     </div>
 
-    <div class="character-card">
-      <h3>Mira Vale</h3>
-      <span class="spade">Spade: Pulse</span>
-      <p>Precise. Lethal. Calculated.</p>
+    <div class="feature">
+      <h3>Brutal Battles with Consequences</h3>
+      <p>Every clash leaves scars — emotional and irreversible.</p>
     </div>
 
-    <div class="character-card">
-      <h3>Ash Kuroda</h3>
-      <span class="spade">Spade: Ignition</span>
-      <p>Contained fury. Controlled combustion.</p>
+    <div class="feature">
+      <h3>Emotion-Driven Character Arcs</h3>
+      <p>Power reveals who you really are.</p>
     </div>
+
+    <div class="feature">
+      <h3>A Society on the Brink</h3>
+      <p>Urban decay. Militarized control. A world unraveling.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CHARACTER TEASER -->
+<section class="section reveal">
+  <h2 class="section-title">The One Who Shouldn’t Have Awakened</h2>
+
+  <p>He wasn’t trained.</p>
+  <p>He wasn’t chosen.</p>
+  <p>He wasn’t prepared.</p>
+
+  <p class="impact">
+    When everything shattered, something answered him from within.
+  </p>
+
+  <p>
+    His Life Energy didn’t erupt like the others.
+    It adapted.
+    It learned.
+    It mirrored.
+  </p>
+
+  <p class="accent impact">
+    A Spade that shouldn’t exist.
+  </p>
+
+  <p>
+    He doesn’t understand what he’s becoming.
+  </p>
+
+  <p class="impact">
+    But the factions do.
+  </p>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta reveal">
+  <h2>The Awakening Has Begun.</h2>
+
+  <p>The first surge. The first rebellion. The first fracture in control.</p>
+
+  <div class="cta-buttons">
+    <a href="#" class="cta-primary">Read Chapter 1 Now</a>
+    <a href="#" class="cta-secondary">Join the Inner Circle</a>
   </div>
 </section>
 
 <footer>
-  © 2026 NEPHILIM
+  <p>© 2026 NEPHILIM</p>
+  <p class="tagline">Power isn’t granted. It answers.</p>
 </footer>
 
 <script>
 tsParticles.load("particles", {
   background: { color: "transparent" },
   particles: {
-    number: { value: 70 },
-    color: { value: ["#ff8c00", "#ffae00", "#ff6a00"] },
-    move: { enable: true, speed: 0.8 },
-    opacity: { value: 0.4 },
+    number: { value: 60 },
+    color: { value: ["#ffae00", "#ff6a00"] },
+    move: { enable: true, speed: 0.7 },
+    opacity: { value: 0.3 },
     size: { value: { min: 1, max: 3 } }
   }
 });
