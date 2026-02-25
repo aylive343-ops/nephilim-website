@@ -1,168 +1,143 @@
+/* GLOBAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  background: #0f0f0f;
-  color: #f2f2f2;
-  overflow-x: hidden;
+  background: #0a0a0a;
+  color: #f5f5f5;
+  line-height: 1.6;
 }
 
 /* HERO */
 .hero {
-  position: relative;
-  min-height: 100vh;
-  background: radial-gradient(circle at center, #1c1200 0%, #000 70%);
+  height: 100vh;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000 70%);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 20px;
-}
-
-#particles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.hero-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.5), #000);
-  z-index: 1;
-}
-
-.hero-content {
   position: relative;
-  z-index: 2;
-  max-width: 900px;
 }
 
-.title {
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 900;
-  letter-spacing: 8px;
-  background: linear-gradient(90deg, #ffae00, #ff6a00);
+.logo {
+  font-size: 4rem;
+  letter-spacing: 6px;
+  background: linear-gradient(90deg, #ff9f00, #ff5e00);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 30px rgba(255,140,0,0.5);
+  color: transparent;
+  margin-bottom: 20px;
 }
 
-.subtitle {
-  margin-top: 20px;
-  font-weight: 600;
-  opacity: 0.9;
+.tagline {
+  font-size: 1.2rem;
+  color: #ffae00;
+  margin-bottom: 20px;
 }
 
-.hero-lines {
-  margin: 30px 0;
-  opacity: 0.85;
+.hero-text {
+  margin-bottom: 30px;
+  opacity: 0.8;
 }
 
+/* BUTTONS */
 .cta-primary {
-  display: inline-block;
-  padding: 14px 40px;
-  border: 2px solid #ff8c00;
-  color: #ff8c00;
+  background: linear-gradient(90deg, #ff9f00, #ff5e00);
+  padding: 12px 28px;
+  color: #000;
+  font-weight: bold;
   text-decoration: none;
-  font-weight: 600;
+  border-radius: 4px;
   transition: 0.3s ease;
 }
 
 .cta-primary:hover {
-  background: linear-gradient(90deg, #ff8c00, #ffae00);
-  color: black;
-  box-shadow: 0 0 25px rgba(255,140,0,0.6);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 120, 0, 0.6);
+}
+
+.large {
+  padding: 16px 40px;
+  font-size: 1.1rem;
 }
 
 /* SECTIONS */
 .section {
-  padding: 120px 15%;
-  max-width: 1000px;
+  padding: 100px 20px;
+  max-width: 900px;
   margin: auto;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #ffae00;
-}
-
-.accent {
-  color: #ffae00;
-}
-
-.impact {
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin: 20px 0;
-}
-
-.dark-panel {
-  background: #141414;
-  border-top: 1px solid #2a1a00;
-  border-bottom: 1px solid #2a1a00;
-}
-
-.features {
-  display: grid;
-  gap: 30px;
-}
-
-.feature h3 {
-  color: #ff8c00;
-  margin-bottom: 10px;
-}
-
-/* FINAL CTA */
-.final-cta {
   text-align: center;
+}
+
+.section.dark {
+  background: #111;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  color: #ff9f00;
+}
+
+.feature-list {
+  list-style: none;
+}
+
+.feature-list li {
+  margin-bottom: 20px;
+}
+
+/* CTA */
+.cta-section {
   padding: 120px 20px;
-  background: radial-gradient(circle, #1a0f00 0%, #000 80%);
-}
-
-.cta-buttons {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.cta-secondary {
-  padding: 14px 40px;
-  border: 1px solid #666;
-  color: #ccc;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.cta-secondary:hover {
-  border-color: #ff8c00;
-  color: #ff8c00;
+  text-align: center;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 60px;
-  opacity: 0.5;
+  padding: 40px;
+  opacity: 0.6;
 }
 
-/* SCROLL REVEAL */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
+/* READER */
+.reader-body {
+  background: #000;
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+.reader-header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #222;
+}
+
+.back-btn {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: #ff9f00;
+  text-decoration: none;
+}
+
+.reader-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.manga-page {
+  margin-bottom: 50px;
+}
+
+.manga-page img {
+  width: 100%;
+  display: block;
+  box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+.reader-footer {
+  text-align: center;
+  padding: 40px;
 }
