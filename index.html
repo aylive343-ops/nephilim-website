@@ -3,131 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEPHILIM | Official Manga</title>
-
+<title>NEPHILIM</title>
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 
 <body>
 
-<!-- HERO -->
 <header class="hero">
-  <div id="particles"></div>
   <div class="hero-overlay"></div>
-
   <div class="hero-content">
-    <h1 class="title">NEPHILIM</h1>
-    <h2 class="subtitle">When the Seal Breaks, Power Awakens.</h2>
-
-    <div class="hero-lines">
-      <p>Life Energy sleeps inside everyone.</p>
-      <p>Most die without ever feeling it.</p>
-      <p>Some awaken.</p>
-    </div>
-
-    <a href="#synopsis" class="cta-primary">Read Chapter 1</a>
+    <h1 class="logo">NEPHILIM</h1>
+    <p class="tagline">When the Soul Breaks, Power Answers.</p>
+    <p class="hero-text">
+      Trauma leaves a mark.<br>
+      Some call it a scar.<br>
+      The world calls it a weapon.
+    </p>
+    <a href="reader.html" class="cta-primary">Read Chapter 1</a>
   </div>
 </header>
 
-<!-- SYNOPSIS -->
-<section id="synopsis" class="section reveal">
-  <h2 class="section-title">The Awakening No One Can Control</h2>
-
+<section class="section">
+  <h2>The Mark That Shouldn’t Exist</h2>
   <p>
-    In a world where Life Energy lies dormant beneath human skin, most people live unaware of the storm inside them.
+    In a world where emotional trauma manifests as supernatural force,
+    the broken don’t disappear. They awaken.
   </p>
-
-  <p class="impact">Until something breaks.</p>
-
   <p>
-    NEPHILIM is the name given to those who survive emotional fracture and awaken the force sealed within their bodies — a violent surge of instinct and identity known as a <span class="accent">Spade</span>.
+    NEPHILIM is the phenomenon no government can control and no religion can explain —
+    a cursed imprint burned into the soul at the moment a person shatters.
   </p>
-
   <p>
-    Governments call them threats. Religions call them heresy. Underground factions call them the future.
-  </p>
-
-  <p class="impact">
-    The question isn’t who has power.<br>
-    It’s who can survive having it.
+    Some awaken to survive. Others awaken to destroy.
   </p>
 </section>
 
-<!-- WHY YOU'LL LOVE IT -->
-<section class="section dark-panel reveal">
-  <h2 class="section-title">Why You’ll Love This Series</h2>
-
-  <div class="features">
-    <div class="feature">
-      <h3>A Power System Forged from Identity</h3>
-      <p>Spades manifest from who you are at your breaking point.</p>
-    </div>
-
-    <div class="feature">
-      <h3>Rebel Factions & Hidden Agendas</h3>
-      <p>No clean heroes. No pure villains. Only ideology and survival.</p>
-    </div>
-
-    <div class="feature">
-      <h3>Brutal Battles with Consequences</h3>
-      <p>Every clash leaves scars — emotional and irreversible.</p>
-    </div>
-
-    <div class="feature">
-      <h3>Emotion-Driven Character Arcs</h3>
-      <p>Power reveals who you really are.</p>
-    </div>
-
-    <div class="feature">
-      <h3>A Society on the Brink</h3>
-      <p>Urban decay. Militarized control. A world unraveling.</p>
-    </div>
-  </div>
+<section class="section dark">
+  <h2>Why You’ll Love This Series</h2>
+  <ul class="feature-list">
+    <li><strong>Cursed Power System</strong> – Abilities forged through psychological breaking points.</li>
+    <li><strong>Rebel Factions</strong> – No pure heroes. Only ideology and survival.</li>
+    <li><strong>Brutal Consequences</strong> – Every fight leaves a scar.</li>
+    <li><strong>Raw Emotion</strong> – Grief. Rage. Identity. Nothing cosmetic.</li>
+    <li><strong>Cinematic World</strong> – Urban decay and rebellion in real time.</li>
+  </ul>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta reveal">
-  <h2>The Awakening Has Begun.</h2>
-
-  <p>The first surge. The first rebellion. The first fracture in control.</p>
-
-  <div class="cta-buttons">
-    <a href="#" class="cta-primary">Read Chapter 1 Now</a>
-    <a href="#" class="cta-secondary">Join the Inner Circle</a>
-  </div>
+<section class="cta-section">
+  <h2>The Mark Is Spreading.</h2>
+  <p>This is only the beginning.</p>
+  <a href="reader.html" class="cta-primary large">Enter Chapter 1</a>
 </section>
 
 <footer>
-  <p>© 2026 NEPHILIM</p>
-  <p class="tagline">Power isn’t granted. It answers.</p>
+  <p>“Power is not given. It is carved into you.”</p>
 </footer>
-
-<script>
-tsParticles.load("particles", {
-  background: { color: "transparent" },
-  particles: {
-    number: { value: 60 },
-    color: { value: ["#ffae00", "#ff6a00"] },
-    move: { enable: true, speed: 0.7 },
-    opacity: { value: 0.3 },
-    size: { value: { min: 1, max: 3 } }
-  }
-});
-
-const reveals = document.querySelectorAll(".reveal");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("active");
-    }
-  });
-});
-
-reveals.forEach(section => observer.observe(section));
-</script>
 
 </body>
 </html>
